@@ -9,5 +9,5 @@ elif word == 1:
     print("1 argument:")
 else:
     print("{} arguments:".format(word))
-for i in range(1, word + 1):
+for i in range(word):
     print("{}: {}".format(i + 1, sys.argv[i + 1]))
