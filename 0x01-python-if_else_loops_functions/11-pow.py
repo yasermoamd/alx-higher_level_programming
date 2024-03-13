@@ -13,4 +13,4 @@ def pow(a, b):
         half_pow = pow(a, b //2)
         return half_pow * half_pow
     else:
-        return a * pow(a,b - 1)
+        return a * pow(a, b - 1)
