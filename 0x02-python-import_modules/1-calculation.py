@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-from calculator_1 import add, sub, mul, div
+add = __import__('calculator_1').add
+sub = __import__('calculator_1').sub
+mul = __import__('calculator_1').mul
+div = __import__('calculator_1').div
 
 
 if __name__ == "__main__":
