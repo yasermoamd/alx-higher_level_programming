@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-add = __import__('add_0').add
+if __name__ == "__main__":
+    """Print the sum of 1 and 2."""
+    add = __import__('add_0').add
 
-a = 1
-b = 2
-print("{} + {} = {}".format(a, b, add(a, b)))
+    a = 1
+    b = 2
+    print("{} + {} = {}".format(a, b, add(a, b)))
