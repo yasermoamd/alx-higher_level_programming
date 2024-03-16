@@ -1,27 +1,70 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * main - check the code for
+ * reverse_listint - reverse a linked list
+ * @head: double pointer to the frist node in the list
  *
- * Return: Always 0.
+ * Return: pointer to the first node in the new list
+*/
+listint_t *reverse_listint(listint_t **head)
+{
+	listint_t *prev = NULL;
+	listint_t *current = *head;
+	listint_t *next = NULL;
+
+	while (current != NULL)
+	{
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+
+	return (prev);
+}
+
+/**
+ * is_palindrome - checks if a linked list is a palindrome
+ * @head: double pointer to the linked list
+ *
+ * Return: 1 if it is, 0 if not
  */
 int is_palindrome(listint_t **head)
 {
-    size_t length = sizeof(head) / sizeof(head[0]);
 
-    if (*head == NULL) {
-        return (1);
-    }
-    
-    for (size_t i = 0; i < length; i++) {
-        for (size_t j = length; j < length + 1; j--)
-        {
-            if (head[i] == head[j]) {
-                return (1);
-            }
-        }
-    }
-    return (0);
+	if (*head == NULL || (*head)->next == NULL)
+	{
+		return (1);
+	}
+
+	listint_t *slow = *head;
+	listint_t *fast = *head;
+	listint_t *prev = NULL;
+
+	while (fast != NULL && fast->next != NULL)
+	{
+		fast = fast->next->next;
+		prev = slow;
+		slow = slow->next;
+	}
+
+	if (fast != NULL)
+	{
+		slow = slow->next;
+	}
+
+	listint_t *first_half = *head;
+	listint_t *second_half = reverse_listint(&slow);
+
+	while (second_half != NULL)
+	{
+		if (first_half->data != second_half->data)
+		{
+			return (0);
+		}
+		first_half = first_half->next;
+		second_half = second_half->next;
+	}
+
+	return (1);
 }
