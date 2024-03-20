@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/yasermoamd/Desktop/alx-higher_level_programming/0x03-python-data_structures",
+      "program": "/Users/yasermoamd/Desktop/alx-higher_level_programming/0x03-python-data_structures/build/Debug/outDebug"
+    }
+  ]
+}
