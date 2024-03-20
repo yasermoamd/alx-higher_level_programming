@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-def print_sorted_dictionary(a_dictionary):
 
+def print_sorted_dictionary(a_dictionary):
     # it will return list of the keys
     sort_dic = sorted(a_dictionary)
 
