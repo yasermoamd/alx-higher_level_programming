@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" Rectangle module """
+"""this is a program that have a class that do nothing"""
 
 
 class Rectangle:
-    """Class that defines a rectangle"""
+    """this a class that do nothing"""
     pass
