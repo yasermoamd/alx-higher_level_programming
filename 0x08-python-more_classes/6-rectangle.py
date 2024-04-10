@@ -21,10 +21,14 @@ class Rectangle:
 
     @property
     def width(self):
+        """ get the width of the rectangle """
+
         return self.__width
 
     @width.setter
     def width(self, value):
+        """set the width of the rectangle"""
+
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -33,10 +37,14 @@ class Rectangle:
 
     @property
     def height(self):
+        """get the height of the rectangle"""
+
         return self.__height
 
     @height.setter
     def height(self, value):
+        """set the height of the rectangle"""
+
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -44,9 +52,13 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """get the area of the rectangle"""
+
         return self.__width * self.__height
 
     def perimeter(self):
+        """get the perimeter of the rectangle"""
+
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
@@ -57,9 +69,12 @@ class Rectangle:
         return "\n".join(["#" * self.__width for i in range(self.__height)])
 
     def __repr__(self):
+        """return a string representation of the rectangle"""
+
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
         """ Print a message when an instance of Rectangle is deleted """
+
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
