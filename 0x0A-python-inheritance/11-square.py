@@ -16,5 +16,6 @@ class Square(Rectangle):
         return self.__size ** 2
 
     def __str__(self):
-        """Method that returns  the square description [Squre] <width>/<height>"""
+        """Method that returns  the square description
+            [Squre] <width>/<height>"""
         return "[Square] " + str(self.__size) + "/" + str(self.__size)
