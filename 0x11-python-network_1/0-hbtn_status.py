@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ script fetch intranet status"""
-
 import urllib.request
 
 url = "https://alx-intranet.hbtn.io/status"
@@ -11,4 +10,3 @@ print("Body response:")
 print("\t- type", type(body))
 print("\t- content:", body)
 print("\t- utf-8 content", body.decode('utf-8'))
-
